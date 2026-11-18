@@ -1,0 +1,353 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">-->
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Admin hóa đơn chi tiết</title>-->
+<!--    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>-->
+<!--    -->
+<!--</head>-->
+<!--<body class="flex flex-col justify-center items-center bg-[#f1f2f6] overflow-x-hidden">-->
+<!--    <div class="navb flex flex-row h-[80px] w-[100vw] justify-between mb-[50px] bg-[#01ac50] text-white shadow-[0_5px_15px_rgba(0,0,0,0.35)]">-->
+<!--        <div class="infor-shop h-[80px] w-fit flex flex-row justify-center items-center ml-2">-->
+<!--            <img class="w-[50px] h-[50px] rounded-[999px] ml-[20px]" src="/img/tienhungw.jpg" alt="">-->
+<!--            <h2 class="text-[30px] font-medium ml-[10px] mt-[10px] font-['Kaushan_Script']">TH Shop</h2>-->
+<!--        </div>-->
+
+<!--        <div class="relative h-[80px] w-[50vw]">-->
+<!--            <div class="flex flex-row absolute gap-[20px] right-[20px] bottom-[10px] text-lg font-normal">-->
+<!--                <a id="gotoPage1" class="cursor-pointer" href="/admin/products">Sản phẩm</a>-->
+<!--                <a id="gotoPage2" class="cursor-pointer underline" style="text-underline-offset: 4px; text-decoration-thickness: 2px;" href="/admin/order">Đơn đặt hàng</a>-->
+<!--                <a id="gotoPage3" class="cursor-pointer" href="/admin/customer">Khách hàng</a>-->
+<!--                <a id="gotoPage4" class="cursor-pointer" href="/logout">Đăng xuất</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="w-[80vw] h-fit">-->
+<!--        <p class="text-3xl font-normal text-[#127332]">TRANG CỦA NGƯỜI QUẢN LÝ</p>-->
+<!--        <div class="flex flex-row justify-between mt-8">-->
+<!--            <p class="text-2xl font-normal text-black">Thông tin chi tiết đơn hàng</p>-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="flex flex-row justify-between mt-5">-->
+<!--            <div class="w-[20vw]">-->
+<!--                <p class="text-xl text-[#127332] mb-6">Người nhận hàng</p>-->
+<!--                <p class="text-base font-normal mb-1 text-gray-800">Họ tên</p>-->
+<!--                <input class="w-[20vw] h-[40px] border border-gray-600 outline-none rounded-sm p-2 placeholder-gray-600 mb-3" type="text" placeholder="Nhập họ tên">-->
+<!--                <p class="text-base font-normal mb-1 text-gray-800">Số điện thoại</p>-->
+<!--                <input class="w-[20vw] h-[40px] border border-gray-600 outline-none rounded-sm p-2 placeholder-gray-600 mb-3" type="text" placeholder="Nhập Số điện thoại">-->
+<!--                <p class="text-base font-normal mb-1 text-gray-800">Địa chỉ</p>-->
+<!--                <input class="w-[20vw] h-[40px] border border-gray-600 outline-none rounded-sm p-2 placeholder-gray-600 mb-3" type="text" placeholder="Nhập địa chỉ">-->
+<!--            </div>-->
+<!--            <div class="w-[55vw]">-->
+<!--                <p class="text-xl text-[#127332] mb-6 text-center">Đơn hàng</p>-->
+<!--                <div class="flex flex-col w-[50vw] gap-2 ml-[2vw] gap-3">-->
+<!--                    <div class="flex flex-row justify-between mb-2">-->
+<!--                        <p class="text-base text-black w-[25vw]">Tên sản phẩm</p>-->
+<!--                        <p class="text-base text-black w-[10vw] text-center">Giá trị</p>-->
+<!--                        <p class="text-base text-black w-[5vw]">Số lượng</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-row justify-between">-->
+<!--                        <p class="text-lg text-black font-medium w-[25vw]">Máy ảnh KC trắng cam có tích hợp đèn</p>-->
+<!--                        <p class="text-base text-black w-[10vw] text-center">900000</p>-->
+<!--                        <p class="text-base text-black w-[5vw] text-center">1</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-row justify-between">-->
+<!--                        <p class="text-lg text-black font-medium w-[25vw]">Camera giám sát 360 độ kết nối wifi </p>-->
+<!--                        <p class="text-base text-black w-[10vw] text-center">500000</p>-->
+<!--                        <p class="text-base text-black w-[5vw] text-center">1</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-row justify-between">-->
+<!--                        <p class="text-lg text-black font-medium w-[25vw]">Ống kính phụ đa năng dành cho máy ảnh Canon</p>-->
+<!--                        <p class="text-base text-black w-[10vw] text-center">200000</p>-->
+<!--                        <p class="text-base text-black w-[5vw] text-center">1</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-row justify-between">-->
+<!--                        <p class="text-lg text-black font-medium w-[25vw]">Máy ảnh KC trắng cam có tích hợp đèn</p>-->
+<!--                        <p class="text-base text-black w-[10vw] text-center">900000</p>-->
+<!--                        <p class="text-base text-black w-[5vw] text-center">1</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-row justify-between">-->
+<!--                        <p class="text-lg text-black font-medium w-[25vw]">Camera giám sát 360 độ kết nối wifi </p>-->
+<!--                        <p class="text-base text-black w-[10vw] text-center">500000</p>-->
+<!--                        <p class="text-base text-black w-[5vw] text-center">1</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-row justify-between">-->
+<!--                        <p class="text-lg text-black font-medium w-[25vw]">Ống kính phụ đa năng dành cho máy ảnh Canon</p>-->
+<!--                        <p class="text-base text-black w-[10vw] text-center">200000</p>-->
+<!--                        <p class="text-base text-black w-[5vw] text-center">1</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="w-fit mt-[70px] relative ml-[300px]">-->
+<!--                    <p class="text-xl font-medium mb-4">Tổng giá trị đơn hàng: 3200000</p>-->
+<!--                    <button class="absolute right-0 text-xl font-medium text-white w-[200px] h-[50px] bg-[#DAB10C] rounded-xl cursor-pointer" id="xong">-->
+<!--                        Xong-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="w-[60vw] h-[30px] mt-24 mb-5">-->
+<!--        <p class="text-lg font-nomarl text-gray-600 text-center">-->
+<!--            © 2025 Bản quyền thuộc về TH Shop-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--&lt;!&ndash;        document.getElementById("gotoPage1").addEventListener("click", function() {&ndash;&gt;-->
+<!--&lt;!&ndash;            window.location.href = "admin.html";&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;        document.getElementById("gotoPage2").addEventListener("click", function() {&ndash;&gt;-->
+<!--&lt;!&ndash;            window.location.href = "admin-dondathang.html";&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;        document.getElementById("gotoPage3").addEventListener("click", function() {&ndash;&gt;-->
+<!--&lt;!&ndash;            window.location.href = "admin-khachhang.html";&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;        document.getElementById("xong").addEventListener("click", function() {&ndash;&gt;-->
+<!--&lt;!&ndash;            window.location.href = "admin-dondathang.html";&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dat hang</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <style>
+
+    </style>
+</head>
+<body class="flex flex-col justify-center items-center bg-[#F3F1EC] overflow-x-hidden">
+<div class="navb flex flex-row h-[80px] w-[100vw] justify-between mb-[50px] bg-[#dea069] text-white shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="infor-shop h-[80px] w-fit flex flex-row justify-center items-center ml-2">
+        <img class="w-[50px] h-[50px] rounded-[999px] ml-[20px]" src="/img/tienhungw.jpg" alt="">
+        <h2 class="text-[30px] font-medium ml-[10px] mt-[10px] font-['Kaushan_Script']">TH Shop</h2>
+    </div>
+
+    <div class="relative h-[80px] w-[50vw] absolute right-[20px]">
+        <div class="relative h-[80px] w-[50vw]">
+            <div class="flex flex-row absolute gap-[20px] right-[20px] bottom-[10px] text-lg font-normal">
+                <a id="gotoPage1" class="cursor-pointer" href="/admin/products">Sản phẩm</a>
+                <a id="gotoPage2" class="cursor-pointer underline" style="text-underline-offset: 4px; text-decoration-thickness: 2px;" href="/admin/order">Đơn đặt hàng</a>
+                <a id="gotoPage3" class="cursor-pointer" href="/admin/customer">Khách hàng</a>
+                <a id="gotoPage4" class="cursor-pointer" href="/logout" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không?')">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="w-fit h-fit relative">-->
+<!--    <p class="text-3xl font-normal text-[#dea069] mb-6">CHI TIẾT ĐƠN HÀNG</p>-->
+<!--    <p class="text-[27px] font-normal mb-10"></p>-->
+<!--    <div class="flex flex-row justify-between mt-5 mb-4">-->
+<!--        <div class="w-[20vw]">-->
+<!--            <p class="text-xl text-[#dea069] mb-6">Người nhận hàng</p>-->
+<!--            <p class="text-base font-normal m-2 text-gray-800">Họ tên</p>-->
+<!--            <span class="w-[20vw] h-[40px] border border-gray-600 outline-none rounded-sm p-2 placeholder-gray-600 mb-3" th:text="${user.full_name}"></span>-->
+<!--            <p class="text-base font-normal m-2 text-gray-800">Số điện thoại</p>-->
+<!--            <span class="w-[20vw] h-[40px] border border-gray-600 outline-none rounded-sm p-2 placeholder-gray-600 mb-3" th:text="${user.phone}"></span>-->
+<!--            <p class="text-base font-normal m-2 text-gray-800">Địa chỉ</p>-->
+<!--            <span class="w-[20vw] h-[40px] border border-gray-600 outline-none rounded-sm p-2 placeholder-gray-600 mb-3" th:text="${user.address}"></span>-->
+<!--        </div>-->
+<!--        <div class="w-[55vw]">-->
+<!--            <p class="text-xl text-[#dea069] mb-6 text-center">Đơn hàng</p>-->
+<!--            <div class="cart-items">-->
+<!--                <div class="cart-item flex flex-row gap-20 mb-4" th:each="item : ${orderDetails}">-->
+<!--                    <div class="tb-pname w-[250px]" th:text="${item.product.name}"></div>-->
+<!--                    <div class="tb-pimg">-->
+<!--                        <img th:src="@{${item.product.imageUrl}}" alt="product image" width="80">-->
+<!--                    </div>-->
+<!--                    <div class="tb-pprice" th:text="${item.product.price}"></div>-->
+<!--                    <div class="tb-pquantity" th:text="${item.quantity}"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="text-lg font-medium">-->
+<!--        Tổng giá trị đơn hàng:-->
+<!--        <span th:text="${#numbers.formatDecimal(order.totalPrice, 0, 'COMMA', 0, 'POINT')} + ' VND'">0 VND</span>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;        <p class="text-xl font-medium mt-8" th:value="${totalPrice}"></p>&ndash;&gt;-->
+<!--    <form th:action="@{/admin/order}" method="get">-->
+<!--        <button class="bg-[#dea069] hover:bg-[#ffa801] w-[250px] h-[50px] text-lg font-medium rounded-lg mt-10 text-white absolute left-[50%] -translate-x-[50%] cursor-pointer" id="dathang" type="submit">XONG</button>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+
+<div class="w-[85vw] bg-white rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-8 relative">
+
+    <p class="text-4xl font-bold text-[#dea069] mb-8 tracking-wide text-center">
+        CHI TIẾT ĐƠN HÀNG
+    </p>
+
+    <div class="flex flex-row gap-10 justify-between">
+
+        <!-- Thông tin người nhận -->
+        <div class="w-[25%] bg-[#fffaf5] rounded-2xl border border-[#f1e0cf] p-6 shadow-sm">
+            <p class="text-2xl font-semibold text-[#dea069] mb-6 border-b border-[#ead7c4] pb-3">
+                Người nhận hàng
+            </p>
+
+            <div class="mb-5">
+                <p class="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wide">
+                    Họ tên
+                </p>
+                <div class="w-full min-h-[45px] bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-800 shadow-sm"
+                     th:text="${user.full_name}">
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <p class="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wide">
+                    Số điện thoại
+                </p>
+                <div class="w-full min-h-[45px] bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-800 shadow-sm"
+                     th:text="${user.phone}">
+                </div>
+            </div>
+
+            <div>
+                <p class="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wide">
+                    Địa chỉ
+                </p>
+                <div class="w-full min-h-[80px] bg-white border border-gray-200 rounded-xl px-4 py-3 text-gray-800 shadow-sm break-words"
+                     th:text="${user.address}">
+                </div>
+            </div>
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <div class="w-[72%]">
+            <p class="text-2xl font-semibold text-[#dea069] mb-6 text-center">
+                Danh sách sản phẩm
+            </p>
+
+            <!-- Header -->
+            <div class="grid grid-cols-4 bg-[#dea069] text-white rounded-t-2xl overflow-hidden">
+                <div class="py-4 px-4 font-semibold text-center">Tên sản phẩm</div>
+                <div class="py-4 px-4 font-semibold text-center">Hình ảnh</div>
+                <div class="py-4 px-4 font-semibold text-center">Giá</div>
+                <div class="py-4 px-4 font-semibold text-center">Số lượng</div>
+            </div>
+
+            <!-- Content -->
+            <div class="border border-[#f0e1d2] rounded-b-2xl overflow-hidden">
+
+                <div class="grid grid-cols-4 items-center border-b border-[#f3ece6] px-4 py-5 hover:bg-[#fffaf5] transition-all duration-200"
+                     th:each="item : ${orderDetails}">
+
+                    <div class="font-medium text-gray-800 leading-6"
+                         th:text="${item.product.name}">
+                    </div>
+
+                    <div class="flex justify-center">
+                        <img th:src="@{${item.product.imageUrl}}"
+                             alt="product image"
+                             class="w-[90px] h-[90px] object-cover rounded-2xl border border-gray-200 shadow-sm">
+                    </div>
+
+                    <div class="text-center font-semibold text-[#e58e26]"
+                         th:text="${#numbers.formatDecimal(item.product.price, 0, 'COMMA', 0, 'POINT')} + ' VND'">
+                    </div>
+
+                    <div class="text-center">
+                        <span class="bg-[#fff3e6] text-[#e58e26] px-4 py-2 rounded-full font-semibold"
+                              th:text="${item.quantity}">
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Tổng tiền -->
+    <div class="mt-10 flex justify-end items-center">
+        <div class="bg-[#fff8f0] border border-[#f3dfc8] rounded-2xl px-8 py-5 shadow-sm">
+            <p class="text-lg text-gray-700 mb-2">
+                Tổng giá trị đơn hàng
+            </p>
+
+            <div class="text-3xl font-bold text-[#e58e26]">
+                <span th:text="${#numbers.formatDecimal(order.totalPrice, 0, 'COMMA', 0, 'POINT')} + ' VND'">
+                    0 VND
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button -->
+    <form th:action="@{/admin/order}" method="get">
+        <button
+                class="bg-[#dea069] hover:bg-[#ffa801] transition-all duration-300
+                w-[260px] h-[55px] text-xl font-semibold rounded-2xl
+                mt-10 text-white cursor-pointer
+                shadow-[0_6px_18px_rgba(222,160,105,0.35)]
+                hover:scale-[1.03]
+                block mx-auto"
+                id="dathang"
+                type="submit">
+            XONG
+        </button>
+    </form>
+
+</div>
+
+
+
+
+
+
+<div class="w-[100vw] mt-[200px] mb-5 ml-1 flex-col text-center mb-10">
+    <div class="text-lg font-medium text-gray-600 text-center mb-2">
+        © 2025 Bản quyền thuộc về TH Shop
+    </div>
+    <div class="text-lg font-normal text-gray-600 text-center">
+        Cảm ơn quý khách đã tin tưởng và ủng hộ cửa hàng!
+    </div>
+    <div class="text-lg font-normal text-gray-600 text-center mb-3">
+        Thông tin liên hệ
+    </div>
+    <div class="flex flex-row text-center absolute left-[50%] -translate-x-[50%]">
+        <div class="flex flex-row">
+            <box-icon name='facebook-circle' type='logo' color='rgba(0,0,0,0.70)' ></box-icon>
+            <a target="_blank" class="mr-8 w-[150px] text-gray-700 hover:text-[#009432]" href="https://www.facebook.com/holahuliba">Nguyễn Tiến Hưng</a>
+        </div>
+
+        <div class="flex flex-row">
+            <box-icon name='phone' type='solid' color='rgba(0,0,0,0.70)' ></box-icon>
+            <p class="mr-8 w-[100px] text-gray-700 hover:text-[#009432]">0327644604</p>
+        </div>
+
+        <div class="flex flex-row">
+            <box-icon name='envelope' color='rgba(0,0,0,0.70)' ></box-icon>
+            <a target="_blank" class="mr-8 w-[280px] text-gray-700 hover:text-[#009432]" href="https://mail.google.com/mail/u/0/?pli=1#inbox">nguyentienhung04042004gmail.com</a>
+        </div>
+
+        <div class="flex flex-row">
+            <box-icon name='instagram' type='logo' color='rgba(0,0,0,0.70)' ></box-icon>
+            <a target="_blank" class="w-[150px] text-gray-700 hover:text-[#009432]" href="https://www.instagram.com/holahuliba/">Nguyễn Tiến Hưng</a>
+        </div>
+    </div>
+</div>
+<div th:replace="~{fragments/chatbox :: chatbox}"></div>
+</body>
+</html>
